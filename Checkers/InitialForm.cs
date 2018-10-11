@@ -25,25 +25,30 @@ namespace Checkers {
             return true;
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void OpenNewForm(Form form)
+        {
+            if (form == null)
+            {
+                throw new ArgumentNullException(nameof(form));
+            }
+
             if (checkName(textBox1.Text))
             {
+                Singleton.Instance.name = textBox1.Text;
                 this.Hide();
-                var form2 = new CreateServerForm();
+                var form2 = form;
                 form2.Closed += (s, args) => this.Close();
                 form2.Show();
             }
-		}
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            OpenNewForm(new CreateServerForm());
+        }
 
 		private void button2_Click(object sender, EventArgs e) {
-            if (checkName(textBox1.Text))
-            {
-                this.Hide();
-                var form2 = new JoinServerForm();
-                form2.Closed += (s, args) => this.Close();
-                form2.Show();
-            }
-		}
+            OpenNewForm(new JoinServerForm());
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
