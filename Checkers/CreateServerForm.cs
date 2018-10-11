@@ -17,18 +17,15 @@ namespace Checkers {
 			Shown += CreateServer_Shown;
 		}
 
-		private string getIP() {
-			var host = Dns.GetHostEntry(Dns.GetHostName());
-			foreach (var ip in host.AddressList) {
-				if (ip.AddressFamily == AddressFamily.InterNetwork) {
-					return ip.ToString();
-				}
-			}
-			return "";
-		}
-
 		private void CreateServer_Shown(Object sender, EventArgs e) {
-			label1.Text = "Your ip: " + getIP().ToString();
+			string ip = "";
+			if (NetConnection.GetIP(ref ip)) {
+				IPAddress.TryParse(ip, out Singleton.Instance.ipAdress);
+				label1.Text = "Your ip: " + ip;
+
+				Server ser = new Server();
+			}
+
 		}
 
 		private void label1_Click(object sender, EventArgs e) {
