@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Checkers {
-	class Net {
+	class NetConnection {
 		public static bool GetIP(ref string ipStr) {
 			var host = Dns.GetHostEntry(Dns.GetHostName());
 			foreach (var ip in host.AddressList) {

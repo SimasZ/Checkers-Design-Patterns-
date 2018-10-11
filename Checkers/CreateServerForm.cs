@@ -19,7 +19,7 @@ namespace Checkers {
 
 		private void CreateServer_Shown(Object sender, EventArgs e) {
 			string ip = "";
-			if (Net.GetIP(ref ip)) {
+			if (NetConnection.GetIP(ref ip)) {
 				IPAddress.TryParse(ip, out Singleton.Instance.ipAdress);
 				label1.Text = "Your ip: " + ip;
 
