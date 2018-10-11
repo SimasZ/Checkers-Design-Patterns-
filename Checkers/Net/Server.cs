@@ -12,7 +12,7 @@ namespace Checkers {
 
 		public Server (){
 			try {
-				IPAddress ipAd = IPAddress.Parse("172.21.5.99");
+				IPAddress ipAd = Singleton.Instance.ipAdress;
 				// use local m/c IP address, and 
 				// use the same in the client
 
