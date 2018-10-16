@@ -58,6 +58,7 @@ namespace Checkers.Net {
 			}
 
 
+
 			/*while (true) {
 				byte[] b = new byte[100];
 				int k = s.Receive(b);

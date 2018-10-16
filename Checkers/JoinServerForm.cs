@@ -37,6 +37,7 @@ namespace Checkers {
 		public void OpenGameForm() {
 			Console.WriteLine("sdffhfsdh");
 
+			this.Hide();
 			GameForm form2 = new GameForm();
 			form2.Closed += (s, args) => this.Close();
 			form2.Show();
