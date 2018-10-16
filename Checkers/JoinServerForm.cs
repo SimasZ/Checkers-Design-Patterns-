@@ -29,9 +29,17 @@ namespace Checkers {
 				IPAddress.TryParse(textBox1.Text, out Singleton.Instance.ipAdress);
 
 				//Server ser = new Server();
-				Net.ConnectionBase b = new Net.ConnectionBase(Singleton.Instance.ipAdress, false);
+				Net.ConnectionBase b = new Net.ConnectionBase(Singleton.Instance.ipAdress, false, OpenGameForm);
 				//Net.Client client = new Net.Client(textBox1.Text);
 			}
+		}
+
+		public void OpenGameForm() {
+			Console.WriteLine("sdffhfsdh");
+
+			GameForm form2 = new GameForm();
+			form2.Closed += (s, args) => this.Close();
+			form2.Show();
 		}
 	}
 }

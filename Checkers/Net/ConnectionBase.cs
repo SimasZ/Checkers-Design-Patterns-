@@ -12,9 +12,13 @@ namespace Checkers.Net {
 	class ConnectionBase {
 		IPAddress ip;
 		ASCIIEncoding asen;
+		//GameForm game;
+		Action myMethodName;
 
-		public ConnectionBase(IPAddress _ip, bool isServer) {
+		public ConnectionBase(IPAddress _ip, bool isServer, Action _myMethodName) {
 			ip = _ip;
+			//game = _game;
+			myMethodName = _myMethodName;
 			Thread t;
 			if (isServer) {
 				t = new Thread(startServer);
@@ -28,6 +32,7 @@ namespace Checkers.Net {
 		}
 
 		public void startServer() {
+			asen = new ASCIIEncoding();
 			// use local m/c IP address, and 
 			// use the same in the client
 
@@ -39,7 +44,21 @@ namespace Checkers.Net {
 
 			Socket s = myList.AcceptSocket();
 
-			while (true) {
+			byte[] b = new byte[100];
+			int k = s.Receive(b);
+
+			string message = "";
+			for (int i = 0; i < k; i++)
+				//Console.Write(Convert.ToChar(b[i]));
+				message += Convert.ToChar(b[i]);
+
+			if (message == "connected") {
+				s.Send(asen.GetBytes("connected"));
+				myMethodName();
+			}
+
+
+			/*while (true) {
 				byte[] b = new byte[100];
 				int k = s.Receive(b);
 				Console.WriteLine("Recieved...");
@@ -49,20 +68,40 @@ namespace Checkers.Net {
 				asen = new ASCIIEncoding();
 				s.Send(asen.GetBytes("The string was recieved by the server."));
 				Console.WriteLine("\nSent Acknowledgement");
-				/* clean up */
+				//clean up
 				
-			}
+			}*/
 			s.Close();
 			myList.Stop();
 		}
 
 		public void startClient() {
 			TcpClient tcpclnt = new TcpClient();
-			Console.WriteLine("Connecting.....");
+			//Console.WriteLine("Connecting.....");
+			asen = new ASCIIEncoding();
 
 			tcpclnt.Connect(ip, 8001);
 
-			while (true) {
+			Stream stm = tcpclnt.GetStream();
+
+			byte[] ba = asen.GetBytes("connected");
+			stm.Write(ba, 0, ba.Length);
+
+			byte[] b = new byte[100];
+			int k = stm.Read(b, 0, 100);
+
+			string message = "";
+			for (int i = 0; i < k; i++)
+				//Console.Write(Convert.ToChar(b[i]));
+				message += Convert.ToChar(b[i]);
+
+			if (message == "connected") {
+				//s.Send(asen.GetBytes("connected"));
+				Console.WriteLine("Connected");
+				myMethodName();
+			}
+
+			/*while (true) {
 				String str = Console.ReadLine();
 				Stream stm = tcpclnt.GetStream();
 
@@ -77,7 +116,7 @@ namespace Checkers.Net {
 
 				for (int i = 0; i < k; i++)
 					Console.Write(Convert.ToChar(bb[i]));
-			}
+			}*/
 			tcpclnt.Close();
 		}
 	}
