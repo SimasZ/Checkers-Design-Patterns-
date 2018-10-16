@@ -24,7 +24,7 @@ namespace Checkers {
 				label1.Text = "Your ip: " + ip;
 
 				//Server ser = new Server();
-				Net.ConnectionBase b = new Net.ConnectionBase();
+				Net.ConnectionBase b = new Net.ConnectionBase(Singleton.Instance.ipAdress, true);
 			}
 
 		}
