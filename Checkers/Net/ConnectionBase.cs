@@ -17,14 +17,14 @@ namespace Checkers.Net {
 			ip = _ip;
 			Thread t;
 			if (isServer) {
-				//t = new Thread(startServer);
-				startServer();
+				t = new Thread(startServer);
+				//startServer();
 			} else {
-				//t = new Thread(startClient);
-				startClient();
+				t = new Thread(startClient);
+				//startClient();
 			}
 
-			//t.Start();
+			t.Start();
 		}
 
 		public void startServer() {
@@ -50,9 +50,10 @@ namespace Checkers.Net {
 				s.Send(asen.GetBytes("The string was recieved by the server."));
 				Console.WriteLine("\nSent Acknowledgement");
 				/* clean up */
-				s.Close();
-				myList.Stop();
+				
 			}
+			s.Close();
+			myList.Stop();
 		}
 
 		public void startClient() {
@@ -77,6 +78,7 @@ namespace Checkers.Net {
 				for (int i = 0; i < k; i++)
 					Console.Write(Convert.ToChar(bb[i]));
 			}
+			tcpclnt.Close();
 		}
 	}
 }
