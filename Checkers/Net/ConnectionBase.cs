@@ -17,15 +17,17 @@ namespace Checkers.Net {
 			ip = _ip;
 			Thread t;
 			if (isServer) {
-				t = new Thread(startServer);
+				//t = new Thread(startServer);
+				startServer();
 			} else {
-				t = new Thread(startClient);
+				//t = new Thread(startClient);
+				startClient();
 			}
-			t.Start();
+
+			//t.Start();
 		}
 
 		public void startServer() {
-			IPAddress ipAd = Singleton.Instance.ipAdress;
 			// use local m/c IP address, and 
 			// use the same in the client
 
@@ -44,7 +46,7 @@ namespace Checkers.Net {
 				for (int i = 0; i < k; i++)
 					Console.Write(Convert.ToChar(b[i]));
 
-				ASCIIEncoding asen = new ASCIIEncoding();
+				asen = new ASCIIEncoding();
 				s.Send(asen.GetBytes("The string was recieved by the server."));
 				Console.WriteLine("\nSent Acknowledgement");
 				/* clean up */
@@ -63,7 +65,7 @@ namespace Checkers.Net {
 				String str = Console.ReadLine();
 				Stream stm = tcpclnt.GetStream();
 
-				ASCIIEncoding asen = new ASCIIEncoding();
+				asen = new ASCIIEncoding();
 				byte[] ba = asen.GetBytes(str);
 				Console.WriteLine("Transmitting.....");
 
