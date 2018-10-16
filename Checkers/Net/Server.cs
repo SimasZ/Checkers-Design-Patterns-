@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 
 
-namespace Checkers {
+namespace Checkers.Net {
 	class Server {
 
 		public Server (){

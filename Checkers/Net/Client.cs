@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Checkers.Net {
-	class Client {
+	class Client{
 		public Client(string serverIp) {
 			TcpClient tcpclnt = new TcpClient();
 			Console.WriteLine("Connecting.....");
@@ -36,4 +36,6 @@ namespace Checkers.Net {
 			tcpclnt.Close();
 		}
 	}
+
+
 }

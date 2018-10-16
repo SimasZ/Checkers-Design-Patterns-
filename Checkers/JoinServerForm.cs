@@ -26,7 +26,8 @@ namespace Checkers {
 
 		private void button1_Click(object sender, EventArgs e) {
 			if (checkIP(textBox1.Text)) {
-                Net.Client client = new Net.Client(textBox1.Text);
+				//Net.Client client = new Net.Client(textBox1.Text);
+				Net.ConnectionBase b = new Net.ConnectionBase(Singleton.Instance.ipAdress, false);
 			}
 		}
 	}

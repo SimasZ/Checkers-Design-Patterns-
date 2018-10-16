@@ -23,7 +23,8 @@ namespace Checkers {
 				IPAddress.TryParse(ip, out Singleton.Instance.ipAdress);
 				label1.Text = "Your ip: " + ip;
 
-				Server ser = new Server();
+				//Server ser = new Server();
+				Net.ConnectionBase b = new Net.ConnectionBase();
 			}
 
 		}
