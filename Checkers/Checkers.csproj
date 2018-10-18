@@ -69,8 +69,12 @@
     <Compile Include="JoinServerForm.Designer.cs">
       <DependentUpon>JoinServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movement\ICheckerMovementStrategy.cs" />
+    <Compile Include="Movement\MoveMaker.cs" />
+    <Compile Include="Movement\MoveMakerFacade.cs" />
+    <Compile Include="Movement\PawnMovementStrategy.cs" />
+    <Compile Include="Movement\QueenMovementStrategy.cs" />
     <Compile Include="Net\Client.cs" />
-    <Compile Include="Net\ConnectionBase.cs" />
     <Compile Include="Net\NetConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +94,9 @@
     <EmbeddedResource Include="JoinServerForm.resx">
       <DependentUpon>JoinServerForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
