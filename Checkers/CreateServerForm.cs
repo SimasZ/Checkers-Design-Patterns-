@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Linq; 
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -23,10 +23,18 @@ namespace Checkers {
 				IPAddress.TryParse(ip, out Singleton.Instance.ipAdress);
 				label1.Text = "Your ip: " + ip;
 
-				//Server ser = new Server();
-				Net.ConnectionBase b = new Net.ConnectionBase(Singleton.Instance.ipAdress, true);
+				Net.ConnectionBase b = new Net.ConnectionBase(Singleton.Instance.ipAdress, true, OpenGameForm);
 			}
 
+		}
+
+		public void OpenGameForm() {
+			Console.WriteLine("sdffhfsdh");
+
+			this.Hide();
+			GameForm form2 = new GameForm();
+			form2.Closed += (s, args) => this.Close();
+			form2.Show();
 		}
 
 		private void label1_Click(object sender, EventArgs e) {

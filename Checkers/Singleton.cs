@@ -11,8 +11,9 @@ namespace Checkers
     {
         public string name;
         public IPAddress ipAdress;
+		Net.ConnectionBase connection;
         private static readonly Singleton INSTANCE = new Singleton();
-
+		
 
         private Singleton()
         {
