@@ -1,4 +1,4 @@
-﻿namespace Checkers.Movement
+﻿namespace Checkers.Movement.Strategy
 {
     public interface ICheckerMovementStrategy
     {

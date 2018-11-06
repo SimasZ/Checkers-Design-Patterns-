@@ -45,10 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checker\Checker.cs" />
-    <Compile Include="Checker\Factory\CheckerFactory.cs" />
-    <Compile Include="Checker\CheckerType.cs" />
-    <Compile Include="Checker\Prototype\IPrototype.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,21 +69,16 @@
     <Compile Include="JoinServerForm.Designer.cs">
       <DependentUpon>JoinServerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Movement\Decorator\Decorator.cs" />
-    <Compile Include="Movement\Decorator\DefaultMoveScore.cs" />
-    <Compile Include="Movement\Decorator\EliminatedCheckerScore.cs" />
-    <Compile Include="Movement\Decorator\EliminatedQueenScore.cs" />
-    <Compile Include="Movement\Decorator\IMoveScore.cs" />
-    <Compile Include="Movement\Decorator\PromotionToQueenScore.cs" />
-    <Compile Include="Movement\Strategy\ICheckerMovementStrategy.cs" />
-    <Compile Include="Movement\Adapter\INotify.cs" />
-    <Compile Include="Movement\Facade\MoveMaker.cs" />
-    <Compile Include="Movement\Facade\MoveMakerFacade.cs" />
-    <Compile Include="Movement\Strategy\PawnMovementStrategy.cs" />
-    <Compile Include="Movement\Strategy\QueenMovementStrategy.cs" />
-    <Compile Include="Movement\Adapter\SoundNotificationAdapter.cs" />
-    <Compile Include="Movement\Adapter\TextNotificationAdapter.cs" />
+<<<<<<< HEAD
+    <Compile Include="Movement\ICheckerMovementStrategy.cs" />
+    <Compile Include="Movement\MoveMaker.cs" />
+    <Compile Include="Movement\MoveMakerFacade.cs" />
+    <Compile Include="Movement\PawnMovementStrategy.cs" />
+    <Compile Include="Movement\QueenMovementStrategy.cs" />
+    <Compile Include="Net\Client.cs" />
+=======
     <Compile Include="Net\ConnectionBase.cs" />
+>>>>>>> d97e2b403e74e09b198aac0a4361bdf8f587b414
     <Compile Include="Net\NetConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

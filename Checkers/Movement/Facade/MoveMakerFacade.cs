@@ -1,4 +1,6 @@
-﻿namespace Checkers.Movement
+﻿using System;
+
+namespace Checkers.Movement.Facade
 {
     public class MoveMakerFacade
     {
@@ -10,8 +12,9 @@
 
         public void MakeMove(int x, int y)
         {
+            Console.WriteLine("MoveMakerFacade.MakeMove is called");
             _moveMaker.MakeMove(x, y);
-            _moveMaker.PlaySound();
+            _moveMaker.Notify();
         }
     }
 }

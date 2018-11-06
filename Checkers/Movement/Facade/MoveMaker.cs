@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Media;
+using Checkers.Movement.Adapter;
+using Checkers.Movement.Strategy;
 
-namespace Checkers.Movement
+namespace Checkers.Movement.Facade
 {
     public class MoveMaker
     {
         private readonly ICheckerMovementStrategy _checkerMovementStrategy;
-        private readonly SoundPlayer _soundPlayer;
+        private readonly INotify _notifier;
 
-        public MoveMaker(ICheckerMovementStrategy checkerMovementStrategy)
+        public MoveMaker(ICheckerMovementStrategy checkerMovementStrategy, INotify notifier)
         {
             _checkerMovementStrategy = checkerMovementStrategy;
-            _soundPlayer = new SoundPlayer();
+            _notifier = notifier;
         }
 
         public void MakeMove(int x, int y)
         {
-            Console.WriteLine("Making a move");
             _checkerMovementStrategy.Move(x, y);
         }
 
-        public void PlaySound()
+        public void Notify()
         {
-            Console.WriteLine("Playing sound");
-            _soundPlayer.Play();
+            _notifier.Notify();
         }
     }
 }
