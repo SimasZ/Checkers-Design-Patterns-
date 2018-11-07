@@ -8,9 +8,9 @@ using Checkers.Net;
 
 namespace Checkers.Checker {
 	abstract class GameBoard : Observer.Observer {
-		public GameBoard(Color firstColor, Color secondColor, NetListener subject)
+		public GameBoard(Color firstColor, Color secondColor)
         {
-            this.subject = subject;
+            //this.subject = subject;
             this.subject.RegisterObserver(this);
 		}
 

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace Checkers.Checker {
 	class RandomBoard : GameBoard{
-		public RandomBoard(Color firstColor, Color secondColor, int width, int height) : base(firstColor, secondColor) {
+		private int width, height;
 
+		public RandomBoard(Color firstColor, Color secondColor, int _width, int _height) : base(firstColor, secondColor) {
+			width = _width;
+			height = _height;
 		}
 	}
 }

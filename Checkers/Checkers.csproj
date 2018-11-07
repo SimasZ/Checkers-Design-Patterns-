@@ -55,6 +55,7 @@
     <Compile Include="Checker\Observer\Observer.cs" />
     <Compile Include="Checker\Prototype\IPrototype.cs" />
     <Compile Include="Checker\RandomBoard.cs" />
+    <Compile Include="Checker\Singleton\GameController.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
