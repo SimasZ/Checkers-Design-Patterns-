@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Checkers.Checker {
-	class GameBoard {
-		public GameBoard(Color firstColor, Color secondColor) {
+	class ClassicBoard : GameBoard {
+		public ClassicBoard(Color firstColor, Color secondColor, int size) : base(firstColor, secondColor){
 
 		}
 	}
