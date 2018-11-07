@@ -73,6 +73,11 @@
     <Compile Include="JoinServerForm.Designer.cs">
       <DependentUpon>JoinServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movement\Command\Command.cs" />
+    <Compile Include="Movement\Command\MoveDownLeftCommand.cs" />
+    <Compile Include="Movement\Command\MoveDownRightCommand.cs" />
+    <Compile Include="Movement\Command\MoveUpLeftCommand.cs" />
+    <Compile Include="Movement\Command\MoveUpRightCommand.cs" />
     <Compile Include="Movement\Decorator\Decorator.cs" />
     <Compile Include="Movement\Decorator\DefaultMoveScore.cs" />
     <Compile Include="Movement\Decorator\EliminatedCheckerScore.cs" />
