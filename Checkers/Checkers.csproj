@@ -53,6 +53,7 @@
     <Compile Include="Checker\GameBoard.cs" />
     <Compile Include="Checker\MatchInfo.cs" />
     <Compile Include="Checker\Observer\Observer.cs" />
+    <Compile Include="Checker\PlayerScore.cs" />
     <Compile Include="Checker\Prototype\IPrototype.cs" />
     <Compile Include="Checker\RandomBoard.cs" />
     <Compile Include="Checker\Singleton\GameController.cs" />

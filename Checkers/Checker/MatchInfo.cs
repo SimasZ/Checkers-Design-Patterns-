@@ -9,6 +9,9 @@ namespace Checkers.Checker
 {
     class MatchInfo : Observer.Observer
     {
+        private PlayerScore yourScore;
+        private PlayerScore opponentScore;
+
         public MatchInfo(NetListener subject)
         {
             this.subject = subject;
