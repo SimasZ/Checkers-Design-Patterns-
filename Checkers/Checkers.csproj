@@ -45,10 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checker\Builder\BoardBuilder.cs" />
     <Compile Include="Checker\Checker.cs" />
+    <Compile Include="Checker\ClassicBoard.cs" />
     <Compile Include="Checker\Factory\CheckerFactory.cs" />
     <Compile Include="Checker\CheckerType.cs" />
+    <Compile Include="Checker\GameBoard.cs" />
+    <Compile Include="Checker\MatchInfo.cs" />
+    <Compile Include="Checker\Observer\Observer.cs" />
     <Compile Include="Checker\Prototype\IPrototype.cs" />
+    <Compile Include="Checker\RandomBoard.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,7 @@
     <Compile Include="Movement\Adapter\TextNotificationAdapter.cs" />
     <Compile Include="Net\ConnectionBase.cs" />
     <Compile Include="Net\NetConnection.cs" />
+    <Compile Include="Net\NetListener.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton.cs" />
