@@ -10,7 +10,11 @@ namespace Checkers.Checker.Builder {
 		private Color firstColor, secondColor;
 
 		public GameBoard getBoard(int width, int height) {
-			return new GameBoard();
+			if (width == height) {
+				return new ClassicBoard(firstColor, secondColor, width);
+			} else {
+				return new RandomBoard(firstColor, secondColor, width, height);
+			}
 		}
 
 		public void addFirstColor(Color _firstColor) {
