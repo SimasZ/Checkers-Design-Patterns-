@@ -9,6 +9,11 @@ namespace Checkers.Checker.Builder {
 	class BoardBuilder {
 		private Color firstColor, secondColor;
 
+		public BoardBuilder() {
+			firstColor = Color.White;
+			secondColor = Color.Black;
+		}
+
 		public GameBoard getBoard(int width, int height) {
 			if (width == height) {
 				return new ClassicBoard(firstColor, secondColor, width);

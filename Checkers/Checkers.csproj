@@ -45,10 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checker\Builder\BoardBuilder.cs" />
     <Compile Include="Checker\Checker.cs" />
+    <Compile Include="Checker\ClassicBoard.cs" />
     <Compile Include="Checker\Factory\CheckerFactory.cs" />
     <Compile Include="Checker\CheckerType.cs" />
+    <Compile Include="Checker\GameBoard.cs" />
     <Compile Include="Checker\Prototype\IPrototype.cs" />
+    <Compile Include="Checker\RandomBoard.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
