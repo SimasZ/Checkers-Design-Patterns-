@@ -18,7 +18,7 @@ namespace Checkers.Movement.Command
 
         public override void Execute()
         {
-            state.ChangePosition(state.X - 1, state.Y + 1);
+            state.ChangePosition(state.x - 1, state.y + 1);
         }
     }
 }

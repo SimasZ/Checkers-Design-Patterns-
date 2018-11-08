@@ -7,7 +7,8 @@ using Checkers.Net;
 
 namespace Checkers.Checker.Observer
 {
-    public abstract class Observer
+	[Serializable]
+	public abstract class Observer
     {
         internal NetListener subject;
         public abstract void Update();

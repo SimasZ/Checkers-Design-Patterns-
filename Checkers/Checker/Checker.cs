@@ -5,28 +5,28 @@ namespace Checkers.Checker
 {
     public class Checker : IPrototype
     {
-        public Color Color { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
-        public CheckerType Type { get; set; }
+        public Color color { get; set; }
+        public int x { get; set; }
+        public int y { get; set; }
+        public CheckerType type { get; set; }
 
-        public Checker(Color color, int x, int y, CheckerType type)
+        public Checker(Color _color, int _x, int _y, CheckerType _type)
         {
-            Color = color;
-            X = x;
-            Y = y;
-            Type = type;
+            color = _color;
+            x = _x;
+            y = _y;
+            type = _type;
         }
 
         public void TurnToQueen()
         {
-            Type = CheckerType.Queen;
+            type = CheckerType.Queen;
         }
 
-        public void ChangePosition(int x, int y)
+        public void ChangePosition(int _x, int _y)
         {
-            X = x;
-            Y = y;
+            x = x;
+            y = y;
         }
 
         public object Clone()

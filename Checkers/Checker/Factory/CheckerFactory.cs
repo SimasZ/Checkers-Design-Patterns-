@@ -4,7 +4,7 @@ namespace Checkers.Checker.Factory
 {
     public class CheckerFactory
     {
-        public Checker CreateChecker(string type, Color color, int x, int y)
+        public static Checker CreateChecker(string type, Color color, int x, int y)
         {
             if (type == "Pawn")
             {

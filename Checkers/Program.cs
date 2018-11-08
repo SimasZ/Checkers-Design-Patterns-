@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using Checkers.Checker;
+using Checkers.Checker.Factory;
+using Checkers.Checker.Builder;
+using Checkers.Checker.Singleton;
 
 namespace Checkers {
 	class Program {
@@ -22,9 +28,32 @@ namespace Checkers {
 			/*ConnectionForm m = new ConnectionForm();
 			m.Show();*/
 
-			Application.EnableVisualStyles();
+			/*Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new InitialForm());
+			Application.Run(new InitialForm());*/
+
+			//singleton
+			GameController.Instance.netListener = new Net.NetListener();
+			
+			Checker.Checker c1 = CheckerFactory.CreateChecker("Pawn", Color.Green, 0, 0);//factory
+
+			//prototype (deep clone)
+			Checker.Checker c2 = (Checker.Checker)c1.Clone();
+			Console.WriteLine(c1.color == c2.color);
+
+			//prototype (shallow clone)
+			ClassicBoard classicBoard1 = new ClassicBoard(Color.DarkRed, Color.WhiteSmoke, 10);
+			
+			ClassicBoard classicBoard2 = (ClassicBoard)classicBoard1.Clone();
+			Console.WriteLine(classicBoard1.subject == classicBoard2.subject);
+
+			//builder
+			BoardBuilder builder = new BoardBuilder();
+			builder.addFirstColor(Color.Red);
+			builder.addSecondColor(Color.White);
+			GameBoard board = builder.getBoard(10, 10);
+
+			Console.ReadLine();
 		}
 	}
 }

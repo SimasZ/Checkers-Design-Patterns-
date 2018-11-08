@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Checkers.Checker.Prototype;
 using Checkers.Net;
+using Checkers.Checker.Singleton;
 
 namespace Checkers.Checker {
 	abstract class GameBoard : Observer.Observer, IPrototype {
 		public GameBoard(Color firstColor, Color secondColor)
         {
-            //this.subject = subject;
+            this.subject = GameController.Instance.netListener;
             this.subject.RegisterObserver(this);
 		}
 

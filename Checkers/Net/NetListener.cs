@@ -7,7 +7,8 @@ using Checkers.Checker.Observer;
 
 namespace Checkers.Net
 {
-    class NetListener
+	[Serializable]
+	class NetListener
     {
         List<Observer> observerCollection = new List<Observer>();
 
