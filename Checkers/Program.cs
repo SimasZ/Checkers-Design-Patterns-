@@ -12,6 +12,7 @@ using Checkers.Checker;
 using Checkers.Checker.Factory;
 using Checkers.Checker.Builder;
 using Checkers.Checker.Singleton;
+using Checkers.Movement.Command;
 
 namespace Checkers {
 	class Program {
@@ -53,7 +54,16 @@ namespace Checkers {
 			builder.addSecondColor(Color.White);
 			GameBoard board = builder.getBoard(10, 10);
 
-			Console.ReadLine();
-		}
+
+            // command
+            Checker.Checker ch = new Checker.Checker(Color.Black, 2, 2, CheckerType.Pawn);
+            Command command = new MoveDownLeftCommand(ch);
+            command.Execute();
+            command = new MoveDownRightCommand(ch);
+            command.Execute();
+
+
+            Console.ReadLine();
+        }
 	}
 }

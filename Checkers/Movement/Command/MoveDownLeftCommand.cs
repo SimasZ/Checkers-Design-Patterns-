@@ -19,6 +19,7 @@ namespace Checkers.Movement.Command
 
         public override void Execute()
         {
+            Console.WriteLine("MoveDownLeftCommand move from " + state.x + " " + state.y + " to " + (state.x - 1) + " " + (state.y - 1));
             state.ChangePosition(state.x - 1, state.y - 1);
         }
     }
