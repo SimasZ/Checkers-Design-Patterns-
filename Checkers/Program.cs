@@ -35,7 +35,8 @@ namespace Checkers {
 			//singleton
 			GameController.Instance.netListener = new Net.NetListener();
 			
-			Checker.Checker c1 = CheckerFactory.CreateChecker("Pawn", Color.Green, 0, 0);//factory
+			//factory
+			Checker.Checker c1 = CheckerFactory.CreateChecker("Pawn", Color.Green, 0, 0);
 
 			//prototype (deep clone)
 			Checker.Checker c2 = (Checker.Checker)c1.Clone();
