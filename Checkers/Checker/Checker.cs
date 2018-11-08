@@ -3,7 +3,7 @@ using Checkers.Checker.Prototype;
 
 namespace Checkers.Checker
 {
-    public class Checker : IPrototype<Checker>
+    public class Checker : IPrototype
     {
         public Color Color { get; set; }
         public int X { get; set; }
@@ -29,7 +29,7 @@ namespace Checkers.Checker
             Y = y;
         }
 
-        public Checker Clone()
+        public object Clone()
         {
             return (Checker) MemberwiseClone();
         }

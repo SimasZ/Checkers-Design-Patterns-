@@ -11,6 +11,10 @@ namespace Checkers.Checker.Singleton {
 
 		public NetListener netListener;
 
+	    private GameController()
+	    {
+	    }
+
 		public static GameController Instance {
 			get {
 				return INSTANCE;

@@ -1,7 +1,7 @@
 ﻿namespace Checkers.Checker.Prototype
 {
-    public interface IPrototype<out T>
+    public interface IPrototype
     {
-        T Clone();
+        object Clone();
     }
 }

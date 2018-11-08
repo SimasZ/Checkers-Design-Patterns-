@@ -4,10 +4,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Checkers.Checker.Prototype;
 using Checkers.Net;
 
 namespace Checkers.Checker {
-	abstract class GameBoard : Observer.Observer {
+	abstract class GameBoard : Observer.Observer, IPrototype {
 		public GameBoard(Color firstColor, Color secondColor)
         {
             //this.subject = subject;
@@ -18,5 +19,7 @@ namespace Checkers.Checker {
         {
             //update something
         }
-    }
+
+	    public abstract object Clone();
+	}
 }

@@ -5,14 +5,15 @@ using Checkers.Checker.Prototype;
 
 
 namespace Checkers.Checker {
-	class ClassicBoard : GameBoard, IPrototype<ClassicBoard> {
+	class ClassicBoard : GameBoard {
 		private int size;
 
 		public ClassicBoard(Color firstColor, Color secondColor, int _size) : base(firstColor, secondColor){
 			size = _size;
 		}
 
-	    public ClassicBoard Clone()
+
+	    public override object Clone()
 	    {
 	        using (var memoryStream = new MemoryStream())
 	        {
