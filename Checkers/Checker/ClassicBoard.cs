@@ -2,9 +2,10 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Checkers.Checker.Prototype;
-
+using System;
 
 namespace Checkers.Checker {
+	[Serializable]
 	class ClassicBoard : GameBoard {
 		private int size;
 

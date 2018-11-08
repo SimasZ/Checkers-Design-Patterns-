@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Checkers.Checker {
+	[Serializable]
 	class RandomBoard : GameBoard{
 		private int width, height;
 

@@ -9,6 +9,7 @@ using Checkers.Net;
 using Checkers.Checker.Singleton;
 
 namespace Checkers.Checker {
+	[Serializable]
 	abstract class GameBoard : Observer.Observer, IPrototype {
 		public GameBoard(Color firstColor, Color secondColor)
         {
