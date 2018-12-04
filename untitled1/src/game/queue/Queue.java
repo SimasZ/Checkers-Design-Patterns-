@@ -25,6 +25,8 @@ public class Queue<T> {
 		T[] items = (T[])new Object[amount];
 		DoublyNode<T> node = this.head;
 		for (int i = 0; i < amount; i++){
+			if(node != null)
+				continue;
 			items[i] = node.getItem();
 			node = (DoublyNode<T>)node.getNext();
 		}
