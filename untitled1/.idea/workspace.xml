@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141fc378-2f23-4e7c-aef2-d4adf0913b46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Battle-Tetromino-master/.idea/Battle-Tetromino-master.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Battle-Tetromino-master/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Battle-Tetromino-master/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Battle-Tetromino-master/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/messages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/game/games/OnlineBattleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled1/game/games/OnlineBattleGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/server/Server$ConnectionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled1/server/Server$ConnectionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/server/Server$ServerBufferedReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled1/server/Server$ServerBufferedReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled1/server/Server.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/queue/Queue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/GameRoom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-924">
+              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/games/OnlineBattleGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2601">
+              <caret line="161" column="58" lean-forward="true" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -30,34 +47,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/games/DoublePlayerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="376" column="73" lean-forward="true" selection-start-line="376" selection-start-column="73" selection-end-line="376" selection-end-column="73" />
+            <state relative-caret-position="190">
+              <caret line="238" column="65" lean-forward="true" selection-start-line="238" selection-start-column="65" selection-end-line="238" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/Tetromino.java">
+        <entry file="file://$PROJECT_DIR$/src/game/games/TetrisGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="4726">
+              <caret line="280" column="35" selection-start-line="280" selection-start-column="20" selection-end-line="280" selection-end-column="35" />
               <folding>
-                <element signature="e#9395#9396#0" expanded="true" />
-                <element signature="e#9421#9422#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/javax/swing/ImageIcon.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-106">
-              <caret line="184" column="11" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
-              <folding>
-                <element signature="e#5677#5678#0" expanded="true" />
-                <element signature="e#5717#5718#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="202" column="28" lean-forward="true" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -66,8 +78,26 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>press a</find>
+      <find>requestTetromino</find>
+      <find>upDateLevel</find>
+      <find>myGameGo</find>
       <find>img</find>
+      <find>myCurrentTetromino</find>
+      <find>GameRoom</find>
+      <find>gameRooms</find>
+      <find>serverSock</find>
+      <find>tempSocket</find>
+      <find>gameLoop</find>
+      <find>myHoldTetromino</find>
+      <find>opponentGameGo</find>
+      <find>Waiting for</find>
+      <find>current</find>
+      <find>tetrominoQueues</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Simonas\Desktop\Checkers-Design-Patterns-\untitled1\src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -79,6 +109,9 @@
         <option value="$PROJECT_DIR$/src/game/TransparentPanel.java" />
         <option value="$PROJECT_DIR$/src/game/games/TetrisGame.java" />
         <option value="$PROJECT_DIR$/src/game/queue/Queue.java" />
+        <option value="$PROJECT_DIR$/src/game/games/DoublePlayerGame.java" />
+        <option value="$PROJECT_DIR$/src/game/games/OnlineBattleGame.java" />
+        <option value="$PROJECT_DIR$/src/server/Server.java" />
       </list>
     </option>
   </component>
@@ -117,6 +150,13 @@
               <item name="untitled1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="gameboards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="games" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -143,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543941373010" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543944566523" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -166,8 +206,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="client.TetrominoClient" />
+      <module name="untitled1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="client.TetrominoClient" />
       <module name="untitled1" />
       <method v="2">
@@ -183,6 +230,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Client2" />
       <item itemvalue="Application.Server" />
     </list>
   </component>
@@ -198,18 +246,17 @@
       <updated>1543515331268</updated>
       <workItem from="1543515333712" duration="352000" />
       <workItem from="1543516193645" duration="1281000" />
-      <workItem from="1543940057646" duration="1378000" />
+      <workItem from="1543940057646" duration="5042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3011000" />
+    <option name="totallyTimeSpent" value="6675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -218,7 +265,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -275,37 +322,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/game/games/OnlineBattleGame.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/gameboards/DoublePlayerGameBoard.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/GameRoom.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/gameboards/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/TransparentPanel.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/games/TetrisGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="73" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
-          <caret line="166" column="48" selection-start-line="166" selection-start-column="48" selection-end-line="166" selection-end-column="48" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/games/LocalBattleGame.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -313,14 +334,31 @@
     <entry file="file://$PROJECT_DIR$/src/game/games/SoloGame.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Tetromino.java">
+    <entry file="file://$PROJECT_DIR$/src/game/games/AIGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="32" />
-          <folding>
-            <element signature="e#9395#9396#0" expanded="true" />
-            <element signature="e#9421#9422#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="316">
+          <caret line="39" column="149" selection-start-line="39" selection-start-column="149" selection-end-line="39" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/queue/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1734">
+          <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -335,24 +373,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/games/AIGame.java">
+    <entry file="file://$PROJECT_DIR$/src/game/Tetromino.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="39" column="149" selection-start-line="39" selection-start-column="149" selection-end-line="39" selection-end-column="149" />
+        <state relative-caret-position="289">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="e#9395#9396#0" expanded="true" />
+            <element signature="e#9421#9422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/games/OnlineBattleGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2601">
+          <caret line="161" column="58" lean-forward="true" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/games/TetrisGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4726">
+          <caret line="280" column="35" selection-start-line="280" selection-start-column="20" selection-end-line="280" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/games/DoublePlayerGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="376" column="73" lean-forward="true" selection-start-line="376" selection-start-column="73" selection-end-line="376" selection-end-column="73" />
+        <state relative-caret-position="190">
+          <caret line="238" column="65" lean-forward="true" selection-start-line="238" selection-start-column="65" selection-end-line="238" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/queue/Queue.java">
+    <entry file="file://$PROJECT_DIR$/src/game/gameboards/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state relative-caret-position="306">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/GameRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-924">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="202" column="28" lean-forward="true" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
         </state>
       </provider>
     </entry>
