@@ -46,7 +46,7 @@ namespace Battleships {
 				}
 				string command = args[0];
 				args.RemoveAt(0);
-				Program.handleCommand(false, command, args, message);
+				Program.state.handleCommand(false, command, args, message);
 			}
 		}
 	}

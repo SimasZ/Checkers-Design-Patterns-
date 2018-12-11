@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.states;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -21,6 +22,7 @@ namespace Battleships {
 			if (!IPAddress.TryParse(ipStr, out adress)) {
 				return;
 			}
+			Console.WriteLine("hosting on ip: " + ipStr);
 
 			tcp = new TcpListener(adress, port);
 			tcp.Start();
@@ -35,8 +37,11 @@ namespace Battleships {
 		}
 
 		private void waitForConnection() {
+			Console.WriteLine("Waiting for other player...");
 			socket = tcp.AcceptSocket();
 			connected = running = true;
+			Console.WriteLine("Opponent has joined the game");
+			Program.SwitchState(new GameSetupState());
 			Thread thread = new Thread(connectionListener);
 			thread.Start();
 		}
@@ -47,7 +52,6 @@ namespace Battleships {
 				int k = 0;
 				try {
 					k = socket.Receive(b);
-					Console.WriteLine(k);
 				} catch (SocketException except) {
 					Console.WriteLine("sfdh");
 				}
@@ -62,7 +66,7 @@ namespace Battleships {
 				}
 				string command = args[0];
 				args.RemoveAt(0);
-				Program.handleCommand(false, command, args, message);
+				Program.state.handleCommand(false, command, args, message);
 			}
 			socket.Close();
 			tcp.Stop();

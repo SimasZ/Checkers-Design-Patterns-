@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.states;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,6 @@ namespace Battleships {
 			switch (command) {
 				case "say": {
 					Program.connection.SendCommand(line);
-				}
-				return;
-				case "ss": {
-					while (true) {
-
-					}
 				}
 				return;
 			}
