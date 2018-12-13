@@ -45,6 +45,8 @@
     <Compile Include="Board.cs" />
     <Compile Include="ChatHandler.cs" />
     <Compile Include="GameInstance.cs" />
+    <Compile Include="states\GameSetupState.cs" />
+    <Compile Include="states\InitialState.cs" />
     <Compile Include="Network\Client.cs" />
     <Compile Include="ConnectionHandler.cs" />
     <Compile Include="Handler.cs" />
@@ -54,9 +56,11 @@
     <Compile Include="Network\Server.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Unit.cs" />
+    <Compile Include="states\State.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

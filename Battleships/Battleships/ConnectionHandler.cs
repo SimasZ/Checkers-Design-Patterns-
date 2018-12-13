@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.states;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -16,9 +17,6 @@ namespace Battleships {
 						return;
 					}
 					Program.connection = connection;
-					string ipStr = null;
-					connection.GetIP(ref ipStr);
-					Console.WriteLine("hosting on ip: " + ipStr);
 				}
 				return;
 				case "join": {
@@ -31,8 +29,9 @@ namespace Battleships {
 						Console.WriteLine("Bad ip adress");
 						return;
 					}
-					Console.WriteLine(ip);
+					Console.WriteLine("Sucessfully joined server");
 					Program.connection = new Client(ip);
+					Program.SwitchState(new GameSetupState());
 				}
 				return;
 			}

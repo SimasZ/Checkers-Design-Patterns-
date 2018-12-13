@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Battleships {
 	class Program {
+		private static object lockObj = new object();
+
 		public static NetConnection connection;
-		private static Handler handler;
-		private static object lockObj;
+		public static State state { get; private set; }
 
 		static void Main(string[] args) {
 			Program program = new Program();
@@ -16,9 +17,7 @@ namespace Battleships {
 		}
 
 		public Program() {
-			handler = new ConnectionHandler();
-			handler.setSucessor(new ChatHandler());
-			lockObj = new object();
+			state = new InitialState();
 		}
 
 		public void start() {
@@ -30,17 +29,16 @@ namespace Battleships {
 				}
 				string command = args[0];
 				args.RemoveAt(0);
-				handleCommand(true, command, args, line);
+
+				lock (lockObj) {
+					state.handleCommand(true, command, args, line);
+				}
 			}
 		}
 
-		public static void handleCommand(bool io, string command, List<string> args, string line) {
+		public static void SwitchState(State newState) {
 			lock (lockObj) {
-				if (io) {
-					handler.HandleLocal(command, args, line);
-				} else {
-					handler.HandleOut(command, args, line);
-				}
+				state = newState;
 			}
 		}
 	}

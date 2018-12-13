@@ -11,6 +11,8 @@ namespace Battleships {
 		public virtual void HandleLocal(string command, List<string> args, string line) {
 			if (sucessor != null) {
 				sucessor.HandleLocal(command, args, line);
+			} else {
+				Console.WriteLine("No such command or this command is not allowed");
 			}
 		}
 
