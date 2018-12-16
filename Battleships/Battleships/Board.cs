@@ -12,12 +12,12 @@ namespace Battleships
 
         private Tile[,] tileMap;
 
-        private List<Ship> ships;
+        private List<Unit> unitList;
 
         public Board()
         {
             tileMap = new Tile[BOARDSIZE, BOARDSIZE];
-            ships = new List<Ship>();
+            unitList = new List<Unit>();
             for (int i = 0; i < BOARDSIZE; i++)
             {
                 for (int j = 0; j < BOARDSIZE; j++)
@@ -32,9 +32,9 @@ namespace Battleships
             tileMap[x, y].Use();
         }
 
-        public void AddShip(Ship ship)
+        public void AddUnit(Unit unit)
         {
-            ships.Add(ship);
+            unitList.Add(unit);
         }
     }
 }
