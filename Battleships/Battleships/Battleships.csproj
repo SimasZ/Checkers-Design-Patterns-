@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatHandler.cs" />
+    <Compile Include="GameSetup.cs" />
+    <Compile Include="GameSetupHandler.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="states\GameSetupState.cs" />
     <Compile Include="states\InitialState.cs" />
     <Compile Include="Network\Client.cs" />

@@ -31,7 +31,7 @@ namespace Battleships {
 				args.RemoveAt(0);
 
 				lock (lockObj) {
-					state.handleCommand(true, command, args, line);
+					state.HandleCommand(true, command, args, line);
 				}
 			}
 		}

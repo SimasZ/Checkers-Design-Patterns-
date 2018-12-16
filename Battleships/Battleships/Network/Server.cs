@@ -66,7 +66,7 @@ namespace Battleships {
 				}
 				string command = args[0];
 				args.RemoveAt(0);
-				Program.state.handleCommand(false, command, args, message);
+				Program.state.HandleCommand(false, command, args, message);
 			}
 			socket.Close();
 			tcp.Stop();
