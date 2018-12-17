@@ -35,6 +35,21 @@ namespace Battleships {
 					}
 				}
 				return;
+				case "place": {
+					if (args.Count != 4) {
+						break;
+					}
+					string unitName = args[0];
+					int x, y;
+					bool rotated;
+
+					Int32.TryParse(args[1], out x);
+					Int32.TryParse(args[2], out y);
+					bool.TryParse(args[3], out rotated);
+
+					setup.TryPlace(unitName, x, y, rotated);
+				}
+				return;
 			}
 			base.HandleLocal(command, args, line);
 		}

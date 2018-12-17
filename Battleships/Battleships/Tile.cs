@@ -14,10 +14,12 @@ namespace Battleships
         public int Y { get; private set; }
 
 
-        public Tile()
+        public Tile(int x, int y)
         {
             IsUsed = false;
             IsHit = false;
+            X = x;
+            Y = y;
         }
 
         public void Use()

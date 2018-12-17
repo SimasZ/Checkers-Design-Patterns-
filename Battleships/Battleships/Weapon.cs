@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    class Unit
+    class Weapon
     {
-        protected Tile[] tiles;
-
-        public Unit(Tile[] tiles)
-        {
-            this.tiles = tiles;
-        }
-
     }
 }

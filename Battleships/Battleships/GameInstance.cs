@@ -16,7 +16,7 @@ namespace Battleships
             YourBoard = new Board();
             OpponentBoard = new Board();
         }
-
+        
 
 
 
