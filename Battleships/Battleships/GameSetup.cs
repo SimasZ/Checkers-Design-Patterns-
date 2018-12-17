@@ -12,10 +12,11 @@ namespace Battleships {
 			public bool rotated;
 			public string layout;
 
-			public PlacedEntity(string _name, string layout, int _x, int _y, bool _rotated) {
+			public PlacedEntity(string _name, string _layout, int _x, int _y, bool _rotated) {
 				name = _name;
 				x = _x;
 				y = _y;
+				layout = _layout;
 				rotated = _rotated;
 			}
 		}
@@ -46,56 +47,121 @@ namespace Battleships {
 		}
 
 		public void TryPlace(string name, int x, int y, bool rotated) {
-			bool shipFound = false;
 			for (int i = 0;i < unplacedEntities.Count;i++) {
 				if (unplacedEntities[i].name == name) {
-					shipFound = true;
 					if (CheckForClearance(unplacedEntities[i], x, y, rotated)) {
 						placedEntities.Add(new PlacedEntity(unplacedEntities[i].name, unplacedEntities[i].layout, x, y, rotated));
 						unplacedEntities.RemoveAt(i);
 						if (unplacedEntities.Count == 0) {
 							UnitsArePlaced();
 						}
-						return;
 					}
+					return;
 				}
 			}
-			if (!shipFound) {
-				Console.WriteLine("Unit with this name is not found.");
-			}
+			Console.WriteLine("Unit with this name is not found.");
 		}
 
-		public void UnitsArePlaced() {
+		private void UnitsArePlaced() {
 
 		}
 
-		public bool CheckForClearance(UnplacedEntity ent, int x, int y, bool rotated) {
+		private bool CheckForClearance(UnplacedEntity ent, int x, int y, bool rotated) {
 			int subX = 0, subY = 0;
 			char[] arr = ent.layout.ToCharArray();
-			for (int i = 0;i < arr.Length; i++) {
-				if (arr[i] == '+') {
-					if (!CheckPos(x + subX, y + subY)) {
-						Console.WriteLine("Cant place ship in this position");
-						return false;
+			if (rotated == false) {
+				for (int i = 0; i < arr.Length; i++) {
+					if (arr[i] == '+') {
+						if (!CheckPos(x + subX, y + subY)) {
+							Console.WriteLine("Cant place ship in this position");
+							return false;
+						}
+						subX++;
+					} else if (arr[i] == '\n') {
+						subY++;
 					}
-					subX++;
-				} else if (arr[i] == '\n') {
-					subY++;
+				}
+			} else {
+				for (int i = 0; i < arr.Length; i++) {
+					if (arr[i] == '+') {
+						if (!CheckPos(x + subX, y + subY)) {
+							Console.WriteLine("Cant place ship in this position");
+							return false;
+						}
+						subY++;
+					} else if (arr[i] == '\n') {
+						subX--;
+					}
 				}
 			}
+			
 			return true;
 		}
 
-		public bool CheckPos(int x, int y) {
+		public void PrintMap() {
+			bool[,] map = new bool[Globals.boardSize, Globals.boardSize];
+			int subX, subY, tempX, tempY;
+			for (int i = 0; i < placedEntities.Count; i++) {
+				tempX = placedEntities[i].x;
+				tempY = placedEntities[i].y;
+				subX = subY = 0;
+				char[] arr = placedEntities[i].layout.ToCharArray();
+				if (placedEntities[i].rotated == false) {
+					for (int j = 0; j < arr.Length; j++) {
+						if (arr[j] == '+') {
+							map[tempX + subX, tempY + subY] = true;
+							subX++;
+						} else if (arr[i] == '\n') {
+							subY++;
+						}
+					}
+				} else {
+					for (int j = 0; j < arr.Length; j++) {
+						if (arr[j] == '+') {
+							map[tempX + subX, tempY + subY] = true;
+							subY++;
+						} else if (arr[i] == '\n') {
+							subX--;
+						}
+					}
+				}
+			}
+			for (int i = 0; i < Globals.boardSize; i++) {
+				for (int j = 0; j < Globals.boardSize; j++) {
+					if (map[j, i] == false) {
+						Console.Write("O ");
+					} else {
+						Console.Write("# ");
+					}
+				}
+				Console.WriteLine();
+			}
+		}
+
+		private bool CheckPos(int x, int y) {
 			if (x < 0 || y < 0) {
 				return false;
 			}
 			if (x >= Globals.boardSize || y >= Globals.boardSize) {
 				return false;
 			}
-			/*for (int ) {
-
-			}*/
+			int subX, subY, tempX, tempY;
+			for (int i = 0;i < placedEntities.Count;i++) {
+				tempX = placedEntities[i].x;
+				tempY = placedEntities[i].y;
+				subX = subY = 0;
+				char[] arr = placedEntities[i].layout.ToCharArray();
+				for (int j = 0; j < arr.Length; j++) {
+					if (arr[j] == '+') {
+						if (x == tempX + subX && y == tempY + subY) {
+							return false;
+						}
+						subX++;
+					} else if (arr[i] == '\n') {
+						subY++;
+					}
+				}
+			}
 			return true;
 		}
 	}

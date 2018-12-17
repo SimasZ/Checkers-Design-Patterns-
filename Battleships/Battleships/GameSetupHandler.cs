@@ -19,6 +19,11 @@ namespace Battleships {
 						break;
 					}
 
+					if (args[0] == "map") {
+						setup.PrintMap();
+						return;
+					}
+
 					if (args.Count == 1) {
 						break;
 					}
@@ -40,12 +45,13 @@ namespace Battleships {
 						break;
 					}
 					string unitName = args[0];
-					int x, y;
+					int x, y, rotationInt;
 					bool rotated;
 
 					Int32.TryParse(args[1], out x);
 					Int32.TryParse(args[2], out y);
-					bool.TryParse(args[3], out rotated);
+					Int32.TryParse(args[3], out rotationInt);
+					rotated = rotationInt == 0 ? false : true;
 
 					setup.TryPlace(unitName, x, y, rotated);
 				}
