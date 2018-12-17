@@ -34,7 +34,7 @@ namespace Battleships {
 					Program.SwitchState(new GameSetupState());
 				}
 				return;
-			}
+            }
 			base.HandleLocal(command, args, line);
 		}
 	}

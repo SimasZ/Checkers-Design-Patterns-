@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="ChatHandler.cs" />
+    <Compile Include="ChatRoom.cs" />
     <Compile Include="GameSetup.cs" />
     <Compile Include="GameSetupHandler.cs" />
     <Compile Include="Globals.cs" />
@@ -60,6 +61,8 @@
     <Compile Include="Tile.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="states\State.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

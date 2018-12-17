@@ -23,12 +23,11 @@ namespace Battleships {
 				return;
 			}
 			Console.WriteLine("hosting on ip: " + ipStr);
-
 			tcp = new TcpListener(adress, port);
 			tcp.Start();
 
 			initialized = true;
-			Thread thread = new Thread(waitForConnection);
+			Thread thread = new Thread(WaitForConnection);
 			thread.Start();
 		}
 
@@ -36,17 +35,17 @@ namespace Battleships {
 			socket.Send(asen.GetBytes(message));
 		}
 
-		private void waitForConnection() {
+		private void WaitForConnection() {
 			Console.WriteLine("Waiting for other player...");
 			socket = tcp.AcceptSocket();
 			connected = running = true;
 			Console.WriteLine("Opponent has joined the game");
 			Program.SwitchState(new GameSetupState());
-			Thread thread = new Thread(connectionListener);
+			Thread thread = new Thread(ConnectionListener);
 			thread.Start();
 		}
 
-		private void connectionListener() {
+		private void ConnectionListener() {
 			byte[] b = new byte[1000];
 			while (running) {
 				int k = 0;

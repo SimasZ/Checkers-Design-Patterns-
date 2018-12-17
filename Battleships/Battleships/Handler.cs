@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships {
 	abstract class Handler {
-		private Handler sucessor = null;
+		private Handler sucessor;
 
 		public virtual void HandleLocal(string command, List<string> args, string line) {
 			if (sucessor != null) {
