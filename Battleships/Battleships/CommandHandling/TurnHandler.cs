@@ -59,9 +59,19 @@ namespace Battleships.CommandHandling {
                     }
 			    case "print":
 			    {
-			        if (args[0].Equals("map"))
+			        if (args.Count == 1)
 			        {
-			            instance.yourBoard.PrintMap();
+			            if (args[0].Equals("map"))
+			            {
+			                instance.yourBoard.PrintMap(false);
+			            }
+                    }
+			        else if (args.Count > 1)
+			        {
+			            if (args[0].Equals("opponent") && args[1].Equals("map"))
+			            {
+			                instance.opponentBoard.PrintMap(true);
+			            }
                     }
 			        return;
 			    }

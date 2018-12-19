@@ -103,7 +103,7 @@ namespace Battleships
             return used;
         }
 
-        public void PrintMap()
+        public void PrintMap(bool isOpponentMap)
         {
             for (int i = 0; i < Globals.boardSize; i++)
             {
@@ -113,22 +113,37 @@ namespace Battleships
                     {
                         if (tileMap[i, j].isHit)
                         {
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.Write("# ");
+                            Console.ResetColor();
+                        }
+                        else if(!isOpponentMap)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write("+ ");
                             Console.ResetColor();
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.Write("+ ");
+                            Console.Write("~ ");
                             Console.ResetColor();
                         }
                     }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("~ ");
-                        Console.ResetColor();
+                        if (tileMap[i, j].isHit)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.Write("* ");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write("~ ");
+                            Console.ResetColor();
+                        }
                     }
                 }
                 Console.WriteLine();
