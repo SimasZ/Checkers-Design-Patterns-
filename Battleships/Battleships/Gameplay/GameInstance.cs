@@ -29,5 +29,11 @@ namespace Battleships
         {
             return opponentBoard.HitTile(x, y, out unitDestroyed);
         }
+
+        public bool HitYourBoard(int x, int y, out bool unitDestroyed)
+        {
+            return yourBoard.HitTile(x, y, out unitDestroyed);
+        }
+
     }
 }

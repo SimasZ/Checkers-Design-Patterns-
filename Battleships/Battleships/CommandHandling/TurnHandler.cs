@@ -105,6 +105,8 @@ namespace Battleships.CommandHandling {
                         {
                             hitStatus = ", but missed";
                         }
+                        bool destroyed;
+                        instance.HitYourBoard(x, y, out destroyed);
                         Console.WriteLine("Opponent shot at x:{0} y:{1}{2}", x, y, hitStatus);
                     }                    
                     return;
