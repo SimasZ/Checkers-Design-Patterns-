@@ -42,16 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Board.cs" />
+    <Compile Include="Gameplay\Board.cs" />
     <Compile Include="CommandHandling\ChatHandler.cs" />
     <Compile Include="ChatRoom.cs" />
     <Compile Include="CommandHandling\SetupExchangeHandler.cs" />
+    <Compile Include="CommandHandling\TurnHandler.cs" />
     <Compile Include="GameSetup\BoardSetup.cs" />
     <Compile Include="CommandHandling\GameSetupHandler.cs" />
     <Compile Include="Globals.cs" />
-    <Compile Include="GameInstance.cs" />
+    <Compile Include="Gameplay\GameInstance.cs" />
     <Compile Include="GameSetup\UnitData.cs" />
-    <Compile Include="Ship.cs" />
+    <Compile Include="GameSetup\Memento.cs" />
+    <Compile Include="Gameplay\Ship.cs" />
     <Compile Include="ProgramStates\GameplayState.cs" />
     <Compile Include="ProgramStates\ReadyToPlayState.cs" />
     <Compile Include="GameSetup\UnitLayout.cs" />
@@ -65,12 +67,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Network\Server.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="Unit.cs" />
+    <Compile Include="Gameplay\Tile.cs" />
+    <Compile Include="Gameplay\Unit.cs" />
     <Compile Include="ProgramStates\State.cs" />
     <Compile Include="User.cs" />
     <Compile Include="CommandHandling\UserHandler.cs" />
-    <Compile Include="Weapon.cs" />
+    <Compile Include="Gameplay\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

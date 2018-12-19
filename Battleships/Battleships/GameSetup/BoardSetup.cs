@@ -100,5 +100,15 @@ namespace Battleships {
 			}
 			return command;
 		}
+
+		public Memento CreateMemento() {
+			Memento memento = new Memento(this);
+			return memento;
+		}
+
+		public void Restore(Memento memento) {
+			unplacedEntities = memento.unplacedUnits;
+			placedEntities = memento.placedUnits;
+		}
 	}
 }

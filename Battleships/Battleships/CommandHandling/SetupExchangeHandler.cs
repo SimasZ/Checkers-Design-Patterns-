@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.States;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Battleships {
 	class SetupExchangeHandler : Handler{
 		BoardSetup setup;
 		BoardSetup opponentSetup;
+		public bool yourTurn;
 
 		public SetupExchangeHandler(BoardSetup _setup, BoardSetup _opponentSetup) {
 			setup = _setup;
@@ -35,6 +37,9 @@ namespace Battleships {
 						opponentSetup.TryPlace(name, x, y, rotated == 1 ? true : false);
 						argOffset += 4;
 					}
+				}
+				if (setup.UnitsArePlaced() && opponentSetup.UnitsArePlaced()) {
+					Program.SwitchState(new GameplayState(setup, opponentSetup, yourTurn));
 				}
 				return;
 			}

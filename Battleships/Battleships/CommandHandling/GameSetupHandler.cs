@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Battleships {
 	class GameSetupHandler : Handler{
 		private BoardSetup setup;
+		private Memento memento;
 		private bool opponentIsReady;
 
 		public GameSetupHandler(BoardSetup _setup) {
@@ -54,6 +55,7 @@ namespace Battleships {
 					Int32.TryParse(args[3], out rotationInt);
 					rotated = rotationInt == 0 ? false : true;
 
+					Memento nMemento = setup.CreateMemento();
 					if (setup.TryPlace(unitName, x, y, rotated)) {
 						if (setup.UnitsArePlaced()) {
 							Console.WriteLine("All units are placed!");
@@ -62,8 +64,19 @@ namespace Battleships {
 							Program.SwitchState(state);
 							state.Init(opponentIsReady);
 						} else {
+							memento = nMemento;
 							Console.WriteLine("Unit placed!");
 						}
+					}
+				}
+				return;
+				case "undo": {
+					if (memento != null) {
+						setup.Restore(memento);
+						memento = null;
+						Console.WriteLine("Unit restored");
+					} else {
+						Console.WriteLine("Cant undo");
 					}
 				}
 				return;
