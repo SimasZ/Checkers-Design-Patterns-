@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    class Ship : Unit
+    public class Ship : Unit
     {
         public string shipName { get; private set; }
         public Weapon weapon { get; private set; }
