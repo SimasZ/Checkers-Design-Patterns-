@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Battleships.CommandHandling;
 
 namespace Battleships {
 	class ReadyToPlayState : State{
@@ -17,7 +18,7 @@ namespace Battleships {
 
 			handler = new ChatHandler();
 			setupExchangeHander = new SetupExchangeHandler(_setup, opponentSetup);
-			handler.SetSuccessor(setupExchangeHander).SetSuccessor(new UserHandler());
+			handler.SetSuccessor(setupExchangeHander).SetSuccessor(new UserHandler()).SetSuccessor(new HelpHandler());
 		}
 
 		public void Init(bool _opponentIsReady) {
