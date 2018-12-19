@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships.States {
-	class GameplayState : State{
-
-		public GameplayState(BoardSetup yourBoard, BoardSetup opponentBoard, bool _yourTurn) {
+	class GameplayState : State
+	{
+        public GameplayState(BoardSetup yourBoard, BoardSetup opponentBoard, bool _yourTurn) {
 			TurnHandler turnHandler = new TurnHandler();
+            
 			turnHandler.SetSuccessor(new ChatHandler()).SetSuccessor(new UserHandler()).SetSuccessor(new HelpHandler());
 
 			turnHandler.instance = new GameInstance(yourBoard, opponentBoard, _yourTurn);

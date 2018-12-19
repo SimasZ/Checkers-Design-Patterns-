@@ -103,6 +103,38 @@ namespace Battleships
             return used;
         }
 
+        public void PrintMap()
+        {
+            for (int i = 0; i < Globals.boardSize; i++)
+            {
+                for (int j = 0; j < Globals.boardSize; j++)
+                {
+                    if (tileMap[i, j].isUsed)
+                    {
+                        if (tileMap[i, j].isHit)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write("# ");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write("+ ");
+                            Console.ResetColor();
+                        }
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("~ ");
+                        Console.ResetColor();
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
         /*private void PlaceEntity(int x, int y)
         {
             tileMap[x, y].Use();

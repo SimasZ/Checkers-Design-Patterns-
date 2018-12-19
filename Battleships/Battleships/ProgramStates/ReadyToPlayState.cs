@@ -10,19 +10,19 @@ namespace Battleships {
 	class ReadyToPlayState : State{
 		BoardSetup setup;
 		BoardSetup opponentSetup;
-		SetupExchangeHandler setupExchangeHander;
+		SetupExchangeHandler setupExchangeHandler;
 
 		public ReadyToPlayState(BoardSetup _setup) {
 			setup = _setup;
 			opponentSetup = new BoardSetup();
 
 			handler = new ChatHandler();
-			setupExchangeHander = new SetupExchangeHandler(_setup, opponentSetup);
-			handler.SetSuccessor(setupExchangeHander).SetSuccessor(new UserHandler()).SetSuccessor(new HelpHandler());
+			setupExchangeHandler = new SetupExchangeHandler(_setup, opponentSetup);
+			handler.SetSuccessor(setupExchangeHandler).SetSuccessor(new UserHandler()).SetSuccessor(new HelpHandler());
 		}
 
 		public void Init(bool _opponentIsReady) {
-			setupExchangeHander.yourTurn = _opponentIsReady;
+			setupExchangeHandler.yourTurn = _opponentIsReady;
 			if (_opponentIsReady) {
 				Program.connection.SendCommand(setup.ToCommand());
 			} else {

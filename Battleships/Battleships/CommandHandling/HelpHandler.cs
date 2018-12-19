@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,9 +37,17 @@ namespace Battleships.CommandHandling
                     Console.Write("name -name");
                     Console.ResetColor();
                     Console.WriteLine(" - sets your name.");
-
-                    }
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("attack -x -y [-weapon]");
+                    Console.ResetColor();
+                    Console.WriteLine(" - attacks enemy's board.");
                     return;
+                }
+                case "print map":
+                {
+
+                    return;
+                }
             }
             base.HandleLocal(command, args, line);
         }

@@ -16,7 +16,7 @@ namespace Battleships {
 			opponentSetup = _opponentSetup;
 		}
 
-		public override void HandleOut(string command, List<string> args, string line) {
+        public override void HandleOut(string command, List<string> args, string line) {
 			switch (command) {
 				case "opponentIsReady": {
 					Console.WriteLine("Opponent is ready!");

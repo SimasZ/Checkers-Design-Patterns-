@@ -57,6 +57,14 @@ namespace Battleships.CommandHandling {
                         instance.yourTurn = !instance.yourTurn;
                         return;
                     }
+			    case "print":
+			    {
+			        if (args[0].Equals("map"))
+			        {
+			            instance.yourBoard.PrintMap();
+                    }
+			        return;
+			    }
 			}
 			base.HandleLocal(command, args, line);
 		}
