@@ -28,6 +28,10 @@ namespace Battleships
             return true;
         }
 
+        public bool IsOnTile(Tile tile)
+        {
+            return tiles.Contains(tile);
+        }
         public void Move()
         {
             if (IsMovable())

@@ -19,5 +19,15 @@ namespace Battleships
 			opponentBoard = new Board(opponentBoardSetup);
 			yourTurn = _yourTurn;
 		}
+
+        public bool OpponentTileIsHit(int x, int y)
+        {
+            return opponentBoard.TileIsHit(x, y);
+        }
+
+        public bool HitOpponentBoard(int x, int y, out bool unitDestroyed)
+        {
+            return opponentBoard.HitTile(x, y, out unitDestroyed);
+        }
     }
 }
