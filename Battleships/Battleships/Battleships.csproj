@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAggregate.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="IIterator.cs" />
+    <Compile Include="TileContainer.cs" />
+    <Compile Include="TileIterator.cs" />
     <Compile Include="Gameplay\Board.cs" />
     <Compile Include="CommandHandling\ChatHandler.cs" />
     <Compile Include="ChatRoom.cs" />
@@ -49,7 +54,6 @@
     <Compile Include="CommandHandling\TurnHandler.cs" />
     <Compile Include="GameSetup\BoardSetup.cs" />
     <Compile Include="CommandHandling\GameSetupHandler.cs" />
-    <Compile Include="Globals.cs" />
     <Compile Include="Gameplay\GameInstance.cs" />
     <Compile Include="GameSetup\UnitData.cs" />
     <Compile Include="GameSetup\Memento.cs" />
