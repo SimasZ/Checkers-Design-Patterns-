@@ -19,9 +19,8 @@ namespace Battleships.states {
 			setup = new BoardSetup();
 
 			handler = new ChatHandler();
-			handler.SetSucessor(new GameSetupHandler(setup));
+			handler.SetSuccessor(new GameSetupHandler(setup)).SetSuccessor(new UserHandler());
 			PrintWelcomeMessage2();
-            handler.HandleLocal("opponent_name", new List<string>(){Globals.localUser.GetName()}, "");
 		}
 
 		protected override void PrintWelcomeMessage() {

@@ -19,22 +19,29 @@ namespace Battleships {
 					Program.connection = connection;
 				}
 				return;
-				case "join": {
-					if (args.Count <= 0) {
-						Console.WriteLine("Ip not set");
-						return;
-					}
-					IPAddress ip;
-					if (!IPAddress.TryParse(args[0], out ip)) {
-						Console.WriteLine("Bad ip adress");
-						return;
-					}
-					Console.WriteLine("Sucessfully joined server");
-					Program.connection = new Client(ip);
-					Program.SwitchState(new GameSetupState());
-				}
-				return;
-            }
+			    case "join":
+			    {
+			        if (args.Count <= 0)
+			        {
+			            Console.WriteLine("Ip not set");
+			            return;
+			        }
+
+			        IPAddress ip;
+			        if (!IPAddress.TryParse(args[0], out ip))
+			        {
+			            Console.WriteLine("Bad ip adress");
+			            return;
+			        }
+
+			        Console.WriteLine("Sucessfully joined server");
+			        Program.connection = new Client(ip);
+			        GameSetupState state = new GameSetupState();
+			        Program.SwitchState(state);
+			        state.HandleCommand(true, "opponent_name", new List<string>() {Globals.localUser.GetName()}, "");
+			    }
+			        return;
+			}
 			base.HandleLocal(command, args, line);
 		}
 	}

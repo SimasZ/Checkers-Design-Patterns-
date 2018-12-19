@@ -10,7 +10,7 @@ namespace Battleships
     {
         public static void ShowMessage(User _user, string _message)
         {
-            string _line = DateTime.Today + _user.GetName() + " said: " + _message;
+            string _line = DateTime.Today.ToShortTimeString() + " " + _user.GetName() + " said: " + _message;
             Console.WriteLine(_line);
         }
     }
