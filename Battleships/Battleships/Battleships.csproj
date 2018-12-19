@@ -45,8 +45,8 @@
     <Compile Include="IAggregate.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="IIterator.cs" />
-    <Compile Include="TileContainer.cs" />
-    <Compile Include="TileIterator.cs" />
+    <Compile Include="UnitDataContainer.cs" />
+    <Compile Include="UnitDataIterator.cs" />
     <Compile Include="Gameplay\Board.cs" />
     <Compile Include="CommandHandling\ChatHandler.cs" />
     <Compile Include="ChatRoom.cs" />

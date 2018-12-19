@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	class UnitLayout {
+	public class UnitLayout {
 		public enum Type { Ship };
 
 		public string name { get; private set; }
