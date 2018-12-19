@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	class Program {
+	class Program
+	{
 		private static object lockObj = new object();
 
 		public static NetConnection connection;
@@ -18,6 +19,8 @@ namespace Battleships {
 
 		public Program() {
 			state = new InitialState();
+            Globals.localUser = new User();
+            Globals.users.Add(Globals.localUser);
 		}
 
 		public void start() {

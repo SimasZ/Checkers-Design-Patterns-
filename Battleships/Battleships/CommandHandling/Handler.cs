@@ -22,7 +22,7 @@ namespace Battleships {
 			}
 		}
 
-		public Handler setSucessor(Handler _successor) {
+		public Handler SetSucessor(Handler _successor) {
 			successor = _successor;
 			return successor;
 		}
