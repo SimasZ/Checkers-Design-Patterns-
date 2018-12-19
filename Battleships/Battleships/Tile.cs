@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    class Tile
+    public class Tile
     {
         public bool IsUsed { get; private set; }
         public bool IsHit { get; private set; }

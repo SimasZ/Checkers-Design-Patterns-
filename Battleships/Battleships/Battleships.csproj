@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAggregate.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="ChatHandler.cs" />
     <Compile Include="GameSetup.cs" />
     <Compile Include="GameSetupHandler.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="GameInstance.cs" />
+    <Compile Include="IIterator.cs" />
+    <Compile Include="TileContainer.cs" />
+    <Compile Include="TileIterator.cs" />
     <Compile Include="states\GameSetupState.cs" />
     <Compile Include="states\InitialState.cs" />
     <Compile Include="Network\Client.cs" />
