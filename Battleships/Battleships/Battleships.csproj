@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-	<Compile Include="CommandHandling\HelpHandler.cs" />
+    <Compile Include="CommandHandling\HelpHandler.cs" />
     <Compile Include="Gameplay\LShip.cs" />
     <Compile Include="Gameplay\MShip.cs" />
     <Compile Include="Gameplay\SShip.cs" />
@@ -50,7 +50,7 @@
     <Compile Include="Gameplay\Weapons\HumongousWeapon.cs" />
     <Compile Include="Gameplay\Weapons\MediumWeapon.cs" />
     <Compile Include="Gameplay\Weapons\SmallWeapon.cs" />
-    <Compile Include="IAggregate.cs" />
+    <Compile Include="IContainer.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="IIterator.cs" />
     <Compile Include="UnitDataContainer.cs" />

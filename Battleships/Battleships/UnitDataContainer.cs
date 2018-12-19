@@ -2,7 +2,7 @@
 
 namespace Battleships
 {
-    public class UnitDataContainer : IAggregate
+    public class UnitDataContainer : IContainer
     {
         private readonly List<UnitData> _unitDataContainer;
 

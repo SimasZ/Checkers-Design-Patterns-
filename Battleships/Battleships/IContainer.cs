@@ -1,6 +1,6 @@
 ﻿namespace Battleships
 {
-    public interface IAggregate
+    public interface IContainer
     {
         IIterator GetIterator();
     }
