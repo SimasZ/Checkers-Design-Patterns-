@@ -52,12 +52,12 @@
     <Compile Include="GameInstance.cs" />
     <Compile Include="GameSetup\UnitData.cs" />
     <Compile Include="Ship.cs" />
-    <Compile Include="States\GameplayState.cs" />
-    <Compile Include="States\ReadyToPlayState.cs" />
+    <Compile Include="ProgramStates\GameplayState.cs" />
+    <Compile Include="ProgramStates\ReadyToPlayState.cs" />
     <Compile Include="GameSetup\UnitLayout.cs" />
     <Compile Include="GameSetup\UnitLayoutFactory.cs" />
-    <Compile Include="States\GameSetupState.cs" />
-    <Compile Include="States\InitialState.cs" />
+    <Compile Include="ProgramStates\GameSetupState.cs" />
+    <Compile Include="ProgramStates\InitialState.cs" />
     <Compile Include="Network\Client.cs" />
     <Compile Include="CommandHandling\ConnectionHandler.cs" />
     <Compile Include="CommandHandling\Handler.cs" />
@@ -67,7 +67,7 @@
     <Compile Include="Network\Server.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Unit.cs" />
-    <Compile Include="States\State.cs" />
+    <Compile Include="ProgramStates\State.cs" />
     <Compile Include="User.cs" />
     <Compile Include="CommandHandling\UserHandler.cs" />
     <Compile Include="Weapon.cs" />
