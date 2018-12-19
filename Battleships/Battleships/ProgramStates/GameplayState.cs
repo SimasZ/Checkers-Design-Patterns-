@@ -10,7 +10,7 @@ namespace Battleships.States {
 
 		public GameplayState(BoardSetup yourBoard, BoardSetup opponentBoard, bool _yourTurn) {
 			TurnHandler turnHandler = new TurnHandler();
-			turnHandler.SetSucessor(new ChatHandler());
+			turnHandler.SetSuccessor(new ChatHandler()).SetSuccessor(new UserHandler());
 
 			turnHandler.instance = new GameInstance(yourBoard, opponentBoard, _yourTurn);
 

@@ -11,7 +11,7 @@ namespace Battleships {
 		public override void HandleLocal(string command, List<string> args, string line) {
 			switch (command) {
 				case "say": {
-					Program.connection.SendCommand(Globals.localUser.GetName() + " " + line);
+					Program.connection.SendCommand(command + " " + Globals.localUser.GetName() + " " + line.Substring(command.Length + 1));
 				}
 				return;
 			}

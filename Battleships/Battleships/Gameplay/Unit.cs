@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    abstract class Unit
+    public abstract class Unit
     {
         protected List<Tile> tiles;
 

@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	class UnitLayout {
-		public enum Type { Ship };
+	public class UnitLayout {
+		public enum Type { SShip, MShip, LShip, XLShip };
 
 		public string name { get; private set; }
 		public char[] layout { get; private set; }

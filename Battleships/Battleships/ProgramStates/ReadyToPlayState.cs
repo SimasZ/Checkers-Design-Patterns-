@@ -17,7 +17,7 @@ namespace Battleships {
 
 			handler = new ChatHandler();
 			setupExchangeHander = new SetupExchangeHandler(_setup, opponentSetup);
-			handler.SetSucessor(setupExchangeHander);
+			handler.SetSuccessor(setupExchangeHander).SetSuccessor(new UserHandler());
 		}
 
 		public void Init(bool _opponentIsReady) {

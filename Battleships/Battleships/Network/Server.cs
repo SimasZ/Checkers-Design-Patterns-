@@ -40,8 +40,10 @@ namespace Battleships {
 			socket = tcp.AcceptSocket();
 			connected = running = true;
 			Console.WriteLine("Opponent has joined the game");
-			Program.SwitchState(new GameSetupState());
-			Thread thread = new Thread(ConnectionListener);
+		    GameSetupState state = new GameSetupState();
+            Program.SwitchState(state);
+            state.HandleCommand(true, "opponent_name", new List<string>() { Globals.localUser.GetName() }, "");
+            Thread thread = new Thread(ConnectionListener);
 			thread.Start();
 		}
 
@@ -52,7 +54,7 @@ namespace Battleships {
 				try {
 					k = socket.Receive(b);
 				} catch (SocketException except) {
-					Console.WriteLine("sfdh");
+					Console.WriteLine("Connection lost");
 				}
 
 				string message = "";

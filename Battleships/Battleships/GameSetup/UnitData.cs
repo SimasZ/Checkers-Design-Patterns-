@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	class UnitData {
+	public class UnitData {
 		public int x, y;
 		public UnitLayout layout { get; private set; }
 		public List<int> positions { get; private set; }
