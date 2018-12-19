@@ -12,3 +12,10 @@ C:\Users\Simonas\Desktop\Checkers-Design-Patterns-\Battleships\Battleships\obj\D
 C:\Users\Simonas\Desktop\Checkers-Design-Patterns-\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
 C:\Users\Simonas\Desktop\Checkers-Design-Patterns-\Battleships\Battleships\obj\Debug\Battleships.exe
 C:\Users\Simonas\Desktop\Checkers-Design-Patterns-\Battleships\Battleships\obj\Debug\Battleships.pdb
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\bin\Debug\Battleships.exe.config
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\bin\Debug\Battleships.exe
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\bin\Debug\Battleships.pdb
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\obj\Debug\Battleships.csprojAssemblyReference.cache
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\obj\Debug\Battleships.exe
+C:\Home\University\Design Paterns\Checkers\Battleships\Battleships\obj\Debug\Battleships.pdb

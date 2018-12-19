@@ -13,12 +13,12 @@ namespace Battleships {
 
 		public BoardSetup() {
 			unplacedEntities = new List<UnitLayout>();
-			unplacedEntities.Add(factory.GetLayout("xl_ship"));
-			unplacedEntities.Add(factory.GetLayout("l_ship"));
-			unplacedEntities.Add(factory.GetLayout("l_ship"));
+			//unplacedEntities.Add(factory.GetLayout("xl_ship"));
+			//unplacedEntities.Add(factory.GetLayout("l_ship"));
+			//unplacedEntities.Add(factory.GetLayout("l_ship"));
+			//unplacedEntities.Add(factory.GetLayout("m_ship"));
 			unplacedEntities.Add(factory.GetLayout("m_ship"));
-			unplacedEntities.Add(factory.GetLayout("m_ship"));
-			unplacedEntities.Add(factory.GetLayout("s_ship"));
+			//unplacedEntities.Add(factory.GetLayout("s_ship"));
 
 			placedEntities = new List<UnitData>();
 		}
