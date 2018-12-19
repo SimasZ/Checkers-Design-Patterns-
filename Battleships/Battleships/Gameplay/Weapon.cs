@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    public class Weapon
+    public abstract class Weapon
     {
+        private string hitPlaceHolder = "#";
+
+        private string missPlaceHolder = "*";
+
+        protected abstract void Fire();
     }
 }

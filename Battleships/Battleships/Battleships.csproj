@@ -46,6 +46,9 @@
     <Compile Include="Gameplay\MShip.cs" />
     <Compile Include="Gameplay\SShip.cs" />
     <Compile Include="Gameplay\XLShip.cs" />
+    <Compile Include="Gameplay\Weapons\HumongousWeapon.cs" />
+    <Compile Include="Gameplay\Weapons\MediumWeapon.cs" />
+    <Compile Include="Gameplay\Weapons\SmallWeapon.cs" />
     <Compile Include="IAggregate.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="IIterator.cs" />
