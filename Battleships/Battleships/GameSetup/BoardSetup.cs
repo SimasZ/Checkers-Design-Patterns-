@@ -62,11 +62,16 @@ namespace Battleships {
 			}
 			for (int i = 0; i < Globals.boardSize; i++) {
 				for (int j = 0; j < Globals.boardSize; j++) {
-					if (map[j, i] == false) {
-						Console.Write("O ");
+					if (map[j, i] == false)
+					{
+					    Console.ForegroundColor = ConsoleColor.Blue;
+						Console.Write("~ ");
+                        Console.ResetColor();
 					} else {
-						Console.Write("# ");
-					}
+					    Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("+ ");
+					    Console.ResetColor();
+                    }
 				}
 				Console.WriteLine();
 			}

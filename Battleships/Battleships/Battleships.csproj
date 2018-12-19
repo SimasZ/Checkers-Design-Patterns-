@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gameplay\Weapons\HumongousWeapon.cs" />
+    <Compile Include="Gameplay\Weapons\MediumWeapon.cs" />
+    <Compile Include="Gameplay\Weapons\SmallWeapon.cs" />
     <Compile Include="IAggregate.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="IIterator.cs" />
