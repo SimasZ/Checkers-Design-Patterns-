@@ -54,7 +54,7 @@ namespace Battleships {
 				try {
 					k = socket.Receive(b);
 				} catch (SocketException except) {
-					Console.WriteLine("sfdh");
+					Console.WriteLine("Connection lost");
 				}
 
 				string message = "";

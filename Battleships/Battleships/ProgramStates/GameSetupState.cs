@@ -10,10 +10,10 @@ namespace Battleships.states {
 
 		public GameSetupState() {
 			UnitLayoutFactory factory = new UnitLayoutFactory();
-			factory.GetLayout("s_ship").Setup(UnitLayout.Type.Ship, "+");
-			factory.GetLayout("m_ship").Setup(UnitLayout.Type.Ship, "++");
-			factory.GetLayout("l_ship").Setup(UnitLayout.Type.Ship, "+++");
-			factory.GetLayout("xl_ship").Setup(UnitLayout.Type.Ship, "++++");
+			factory.GetLayout("s_ship").Setup(UnitLayout.Type.SShip, "+");
+			factory.GetLayout("m_ship").Setup(UnitLayout.Type.MShip, "++");
+			factory.GetLayout("l_ship").Setup(UnitLayout.Type.LShip, "+++");
+			factory.GetLayout("xl_ship").Setup(UnitLayout.Type.XLShip, "++++");
 			BoardSetup.factory = factory;
 
 			setup = new BoardSetup();

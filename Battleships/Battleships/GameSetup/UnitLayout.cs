@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships {
 	public class UnitLayout {
-		public enum Type { Ship };
+		public enum Type { SShip, MShip, LShip, XLShip };
 
 		public string name { get; private set; }
 		public char[] layout { get; private set; }
