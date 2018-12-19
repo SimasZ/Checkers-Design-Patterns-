@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Battleships.Gameplay;
 
 namespace Battleships
 {
@@ -37,12 +38,26 @@ namespace Battleships
                 {
                     unitTiles.Add(tileMap[unitData.positions[j], unitData.positions[j + 1]]);
                 }
-                if (unitData.layout.type == UnitLayout.Type.Ship)
+
+                Ship ship = null;
+                switch (unitData.layout.type)
                 {
-                    Ship ship = new Ship(unitTiles);
-                    shipsList.Add(ship);
-                    unitsList.Add(ship);
+                    case UnitLayout.Type.SShip:
+                        ship = new SShip(unitTiles);
+                        break;
+                    case UnitLayout.Type.MShip:
+                        ship = new MShip(unitTiles);
+                        break;
+                    case UnitLayout.Type.LShip:
+                        ship = new LShip(unitTiles);
+                        break;
+                    case UnitLayout.Type.XLShip:
+                        ship = new XLShip(unitTiles);
+                        break;
                 }
+
+                shipsList.Add(ship);
+                unitsList.Add(ship);
             }
         }
 

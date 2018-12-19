@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    public class Ship : Unit
+    public abstract class Ship : Unit
     {
         public string shipName { get; private set; }
         public Weapon weapon { get; private set; }
@@ -28,9 +28,29 @@ namespace Battleships
             return true;
         }
 
-		public void Move() { }
-		public bool IsMovable() { return false; }
-		public bool IsRotatable() { return false; }
-		public void Rotate() { }
+        public void Move()
+        {
+            if (IsMovable())
+            {
+                Console.WriteLine("Movable Ship is moving");
+            }
+        }
+
+        public abstract bool IsMovable();
+        public abstract bool IsRotatable();
+
+        public void Rotate()
+        {
+            if (IsRotatable())
+            {
+                Console.WriteLine("Rotatable Ship is rotating");
+            }
+        }
+
+        public void TemplateMethod()
+        {
+            Rotate();
+            Move();
+        }
     }
 }
