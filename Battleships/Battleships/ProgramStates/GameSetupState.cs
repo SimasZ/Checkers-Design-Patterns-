@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Battleships.CommandHandling;
 
 namespace Battleships.states {
 	class GameSetupState : State{
@@ -19,7 +20,7 @@ namespace Battleships.states {
 			setup = new BoardSetup();
 
 			handler = new ChatHandler();
-			handler.SetSuccessor(new GameSetupHandler(setup)).SetSuccessor(new UserHandler());
+			handler.SetSuccessor(new GameSetupHandler(setup)).SetSuccessor(new UserHandler()).SetSuccessor(new HelpHandler());
 			PrintWelcomeMessage2();
 		}
 
