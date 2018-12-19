@@ -14,6 +14,10 @@ namespace Battleships
             {
                 case "name":
                     Globals.localUser.SetName(args[0]);
+                    if (Program.connection != null){
+                        Program.connection.SendCommand("opponent_name " + args[0]);
+                    }
+
                     return;
                 case "opponent_name":
                     Program.connection.SendCommand("opponent_name " + args[0]);

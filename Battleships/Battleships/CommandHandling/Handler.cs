@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	abstract class Handler {
+	abstract class Handler
+	{
 		private Handler successor = null;
 
 		public virtual void HandleLocal(string command, List<string> args, string line) {
@@ -22,7 +24,8 @@ namespace Battleships {
 			}
 		}
 
-		public Handler SetSucessor(Handler _successor) {
+		public Handler SetSuccessor(Handler _successor)
+		{
 			successor = _successor;
 			return successor;
 		}

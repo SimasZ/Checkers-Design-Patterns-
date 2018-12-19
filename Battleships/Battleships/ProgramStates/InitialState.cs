@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	class InitialState : State{
+	class InitialState : State
+	{
 		public InitialState() {
 			handler = new ConnectionHandler();
+		    handler.SetSuccessor(new UserHandler());
 		}
 
 		protected override void PrintWelcomeMessage() {
