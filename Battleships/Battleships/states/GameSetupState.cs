@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace Battleships.states {
 	class GameSetupState : State{
-		private GameSetup setup;
+		private BoardSetup setup;
 
 		public GameSetupState() {
-			setup = new GameSetup();
+			UnitLayoutFactory factory = new UnitLayoutFactory();
+			factory.GetLayout("s_ship").Setup(UnitLayout.Type.Ship, "+");
+			factory.GetLayout("m_ship").Setup(UnitLayout.Type.Ship, "++");
+			factory.GetLayout("l_ship").Setup(UnitLayout.Type.Ship, "+++");
+			factory.GetLayout("xl_ship").Setup(UnitLayout.Type.Ship, "++++");
+			BoardSetup.factory = factory;
+
+			setup = new BoardSetup();
 
 			handler = new ChatHandler();
-			handler.setSucessor(new GameSetupHandler(setup));
+			handler.SetSucessor(new GameSetupHandler(setup));
 			PrintWelcomeMessage2();
             handler.HandleLocal("opponent_name", new List<string>(){Globals.localUser.GetName()}, "");
 		}

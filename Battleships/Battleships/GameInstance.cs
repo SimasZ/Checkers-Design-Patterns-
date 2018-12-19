@@ -8,17 +8,12 @@ namespace Battleships
 {
     class GameInstance
     {
-        private Board YourBoard { get; set; }
-        private Board OpponentBoard { get; set; }
+        private Board yourBoard { get; set; }
+        private Board opponentBoard { get; set; }
 
-        public GameInstance()
+        public GameInstance(BoardSetup yourBoardSetup)
         {
-            YourBoard = new Board();
-            OpponentBoard = new Board();
-        }
-        
-
-
-
+			yourBoard = new Board(yourBoardSetup);
+		}
     }
 }

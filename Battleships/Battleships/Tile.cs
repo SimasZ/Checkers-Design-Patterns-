@@ -8,28 +8,28 @@ namespace Battleships
 {
     class Tile
     {
-        public bool IsUsed { get; private set; }
-        public bool IsHit { get; private set; }
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        public bool isUsed { get; private set; }
+        public bool isHit { get; private set; }
+        public int x { get; private set; }
+        public int y { get; private set; }
 
 
-        public Tile(int x, int y)
+        public Tile(int _x, int _y)
         {
-            IsUsed = false;
-            IsHit = false;
-            X = x;
-            Y = y;
+			isUsed = false;
+			isHit = false;
+			x = _x;
+			y = _y;
         }
 
         public void Use()
         {
-            this.IsUsed = true;
+            this.isUsed = true;
         }
 
         public void Hit()
         {
-            this.IsHit = true;
+            this.isHit = true;
         }
     }
 }

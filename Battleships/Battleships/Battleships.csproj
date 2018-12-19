@@ -43,27 +43,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
-    <Compile Include="ChatHandler.cs" />
+    <Compile Include="CommandHandling\ChatHandler.cs" />
     <Compile Include="ChatRoom.cs" />
-    <Compile Include="GameSetup.cs" />
-    <Compile Include="GameSetupHandler.cs" />
+    <Compile Include="CommandHandling\SetupExchangeHandler.cs" />
+    <Compile Include="GameSetup\BoardSetup.cs" />
+    <Compile Include="CommandHandling\GameSetupHandler.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="GameInstance.cs" />
+    <Compile Include="GameSetup\UnitData.cs" />
     <Compile Include="Ship.cs" />
-    <Compile Include="states\GameSetupState.cs" />
-    <Compile Include="states\InitialState.cs" />
+    <Compile Include="States\GameplayState.cs" />
+    <Compile Include="States\ReadyToPlayState.cs" />
+    <Compile Include="GameSetup\UnitLayout.cs" />
+    <Compile Include="GameSetup\UnitLayoutFactory.cs" />
+    <Compile Include="States\GameSetupState.cs" />
+    <Compile Include="States\InitialState.cs" />
     <Compile Include="Network\Client.cs" />
-    <Compile Include="ConnectionHandler.cs" />
-    <Compile Include="Handler.cs" />
+    <Compile Include="CommandHandling\ConnectionHandler.cs" />
+    <Compile Include="CommandHandling\Handler.cs" />
     <Compile Include="Network\NetConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Network\Server.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Unit.cs" />
-    <Compile Include="states\State.cs" />
+    <Compile Include="States\State.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserHandler.cs" />
+    <Compile Include="CommandHandling\UserHandler.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>

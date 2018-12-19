@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    class Unit
+    abstract class Unit
     {
-        protected Tile[] tiles;
+        protected List<Tile> tiles;
 
-        public Unit(Tile[] tiles)
+        public Unit(List<Tile> tiles)
         {
             this.tiles = tiles;
-        }
+			foreach (var tile in tiles) {
+				tile.Use();
+			}
+		}
 
     }
 }

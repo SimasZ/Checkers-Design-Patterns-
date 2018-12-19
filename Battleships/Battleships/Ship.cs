@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
-    abstract class Ship : Unit
+    class Ship : Unit
     {
-        public string ShipName { get; private set; }
-        public Weapon Weapon { get; private set; }
+        public string shipName { get; private set; }
+        public Weapon weapon { get; private set; }
 
-        public Ship(Tile[] tiles) : base(tiles)
+        public Ship(List<Tile> tiles) : base(tiles)
         {
 
         }
@@ -20,7 +20,7 @@ namespace Battleships
         {
             foreach (var tile in this.tiles)
             {
-                if (!tile.IsHit) // All tiles have to be hit to consider ship sunken
+                if (!tile.isHit) // All tiles have to be hit to consider ship sunken
                 {
                     return false;
                 }
@@ -28,19 +28,9 @@ namespace Battleships
             return true;
         }
 
-        private void SetTilesAsUsed()
-        {
-            foreach (var tile in tiles)
-            {
-                tile.Use();
-            }
-        }
-
-        abstract public void Move();
-        abstract public bool IsMovable();
-        abstract public bool IsRotatable();
-        abstract public void Rotate();
-
-
+		public void Move() { }
+		public bool IsMovable() { return false; }
+		public bool IsRotatable() { return false; }
+		public void Rotate() { }
     }
 }

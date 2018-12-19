@@ -16,7 +16,7 @@ namespace Battleships {
 
 		protected virtual void PrintWelcomeMessage() { }
 
-		public void HandleCommand(bool io, string command, List<string> args, string line) {
+		public virtual void HandleCommand(bool io, string command, List<string> args, string line) {
 			lock (lockObj) {
 				if (io) {
 					handler.HandleLocal(command, args, line);
