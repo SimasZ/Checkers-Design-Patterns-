@@ -22,6 +22,10 @@ namespace Battleships.CommandHandling
                     Console.ResetColor();
                     Console.WriteLine(" - shows a game board.");
                     Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("print opponent map");
+                    Console.ResetColor();
+                    Console.WriteLine(" - prints opponent's map (works only in gameplay state).");
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("print placed units");
                     Console.ResetColor();
                     Console.WriteLine(" - shows all placed ships.");
@@ -37,6 +41,10 @@ namespace Battleships.CommandHandling
                     Console.Write("name -name");
                     Console.ResetColor();
                     Console.WriteLine(" - sets your name.");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("say -message");
+                    Console.ResetColor();
+                    Console.WriteLine(" - sends a message to opponent.");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("attack -x -y [-weapon]");
                     Console.ResetColor();
