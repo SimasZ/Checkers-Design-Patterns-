@@ -46,6 +46,7 @@
     <Compile Include="Gameplay\LShip.cs" />
     <Compile Include="Gameplay\MShip.cs" />
     <Compile Include="Gameplay\SShip.cs" />
+    <Compile Include="Gameplay\Weapons\IWeaponSetter.cs" />
     <Compile Include="Gameplay\XLShip.cs" />
     <Compile Include="Gameplay\Weapons\HumongousWeapon.cs" />
     <Compile Include="Gameplay\Weapons\MediumWeapon.cs" />

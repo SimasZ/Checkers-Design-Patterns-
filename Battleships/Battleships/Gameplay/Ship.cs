@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Battleships.Gameplay.Weapons;
 
 namespace Battleships
 {
-    public abstract class Ship : Unit
+    public abstract class Ship : Unit, IWeaponSetter
     {
         public string shipName { get; private set; }
         public Weapon weapon { get; private set; }
@@ -32,29 +33,40 @@ namespace Battleships
         {
             return tiles.Contains(tile);
         }
-        public void Move()
+        public virtual void Move()
         {
-            if (IsMovable())
-            {
-                Console.WriteLine("Movable Ship is moving");
-            }
+            Console.WriteLine("Movable Ship is moving");
         }
 
         public abstract bool IsMovable();
         public abstract bool IsRotatable();
 
-        public void Rotate()
+        public virtual void Rotate()
         {
-            if (IsRotatable())
-            {
-                Console.WriteLine("Rotatable Ship is rotating");
-            }
+            Console.WriteLine("Rotatable Ship is rotating");
+        }
+
+        public void Radio()
+        {
+            Console.WriteLine("Ship is radioing");
         }
 
         public void TemplateMethod()
         {
-            Rotate();
-            Move();
+            Radio(); // default method
+            if (IsRotatable())
+            {
+                Rotate(); // hook method
+            }
+            if (IsMovable())
+            {
+                Move(); // hook method
+            }
+        }
+
+        public void SetWeapon(Weapon weapon)
+        {
+            this.weapon = weapon;
         }
     }
 }
