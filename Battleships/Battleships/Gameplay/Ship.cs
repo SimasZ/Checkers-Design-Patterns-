@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Battleships.Gameplay.Weapons;
 
 namespace Battleships
 {
-    public abstract class Ship : Unit
+    public abstract class Ship : Unit, IWeaponSetter
     {
         public string shipName { get; private set; }
         public Weapon weapon { get; private set; }
@@ -61,6 +62,11 @@ namespace Battleships
             {
                 Move(); // hook method
             }
+        }
+
+        public void SetWeapon(Weapon weapon)
+        {
+            this.weapon = weapon;
         }
     }
 }

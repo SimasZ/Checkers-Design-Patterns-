@@ -10,7 +10,7 @@ namespace Battleships.Gameplay.Weapons
     {
         protected override void Fire()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("MediumWeapon");
         }
     }
 }

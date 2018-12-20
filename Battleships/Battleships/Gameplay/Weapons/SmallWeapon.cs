@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Console = System.Console;
 
 namespace Battleships.Gameplay.Weapons
 {
@@ -10,7 +11,7 @@ namespace Battleships.Gameplay.Weapons
     {
         protected override void Fire()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("SmallWeapon");
         }
     }
 }
