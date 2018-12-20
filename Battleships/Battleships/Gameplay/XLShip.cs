@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Battleships.Gameplay
 {
@@ -6,6 +7,11 @@ namespace Battleships.Gameplay
     {
         public XLShip(List<Tile> tiles) : base(tiles)
         {
+        }
+
+        public override void Move()
+        {
+            Console.WriteLine("XLShip is moving");
         }
 
         public override bool IsMovable()

@@ -32,29 +32,35 @@ namespace Battleships
         {
             return tiles.Contains(tile);
         }
-        public void Move()
+        public virtual void Move()
         {
-            if (IsMovable())
-            {
-                Console.WriteLine("Movable Ship is moving");
-            }
+            Console.WriteLine("Movable Ship is moving");
         }
 
         public abstract bool IsMovable();
         public abstract bool IsRotatable();
 
-        public void Rotate()
+        public virtual void Rotate()
         {
-            if (IsRotatable())
-            {
-                Console.WriteLine("Rotatable Ship is rotating");
-            }
+            Console.WriteLine("Rotatable Ship is rotating");
+        }
+
+        public void Radio()
+        {
+            Console.WriteLine("Ship is radioing");
         }
 
         public void TemplateMethod()
         {
-            Rotate();
-            Move();
+            Radio(); // default method
+            if (IsRotatable())
+            {
+                Rotate(); // hook method
+            }
+            if (IsMovable())
+            {
+                Move(); // hook method
+            }
         }
     }
 }
