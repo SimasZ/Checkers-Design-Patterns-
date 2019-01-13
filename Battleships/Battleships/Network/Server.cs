@@ -72,5 +72,9 @@ namespace Battleships {
 			socket.Close();
 			tcp.Stop();
 		}
+
+		public override bool isNull() {
+			return false;
+		}
 	}
 }

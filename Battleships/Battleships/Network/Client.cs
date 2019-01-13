@@ -49,5 +49,9 @@ namespace Battleships {
 				Program.state.HandleCommand(false, command, args, message);
 			}
 		}
+
+		public override bool isNull() {
+			return false;
+		}
 	}
 }

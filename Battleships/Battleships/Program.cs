@@ -1,3 +1,4 @@
+using Battleships.Network;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Battleships {
 		}
 
 		public Program() {
+			connection = new NullConnection();
 			state = new InitialState();
             Globals.localUser = new User();
             Globals.users.Add(Globals.localUser);

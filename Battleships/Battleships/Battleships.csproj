@@ -53,6 +53,7 @@
     <Compile Include="IContainer.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="IIterator.cs" />
+    <Compile Include="Network\NullConnection.cs" />
     <Compile Include="UnitDataContainer.cs" />
     <Compile Include="UnitDataIterator.cs" />
     <Compile Include="Gameplay\Board.cs" />

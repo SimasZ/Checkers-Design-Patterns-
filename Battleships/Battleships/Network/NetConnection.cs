@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace Battleships {
-	class NetConnection {
+	abstract class NetConnection {
 		public static int port = 8001;
 
 		IPAddress ip;
@@ -35,5 +35,7 @@ namespace Battleships {
 			}
 			return false;
 		}
+
+		public abstract bool isNull();
 	}
 }
